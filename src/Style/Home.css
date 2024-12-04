@@ -1,0 +1,72 @@
+.home {
+  height: 100vh;
+  background-image: url('../assets/home.jpg'); /* Transparent background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: Arial, sans-serif;
+  color: #fafafa;
+}
+
+.home-content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home-content h1 {
+	color: #f0a500;;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.home-content p {
+	color: #f7e22c;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.home-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Distance between the icons */
+  margin-top: 20px;
+}
+
+.icon {
+  font-size: 2.5rem; /* Icon size */
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.react-icon {
+  color: #61dafb; /* React blue */
+}
+
+.html-icon {
+  color: #e34f26; /* HTML5 orange */
+}
+
+.css-icon {
+  color: #1572b6; /* CSS3 blue */
+}
+
+.bootstrap-icon {
+  color: #7952b3; /* Bootstrap purple */
+}
+
+.js-icon {
+  color: #f7df1e; /* JavaScript yellow */
+}
