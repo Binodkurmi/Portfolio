@@ -10,7 +10,6 @@ const Footer = () => {
         <div className="footer-form">
           <h3>Send a Message</h3>
           <form>
-            <input type="text" placeholder="Your Name" required />
             <input type="email" placeholder="Your Email" required />
             <textarea placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
