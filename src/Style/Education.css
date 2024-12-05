@@ -1,0 +1,72 @@
+.education-page {
+  padding: 40px;
+  background-color: #f9f9f9; /* Light background */
+  font-family: Arial, sans-serif;
+  color: #333; /* Text color */
+}
+
+.education-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2c3e50; /* Dark blue for heading */
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Adds spacing between letters */
+}
+
+.education-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between the columns */
+  margin-top: 20px;
+}
+
+.education-column {
+  flex: 1; /* Equal width for each column */
+  text-align: center;
+  background-color: #fff; /* Default background */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: none; /* No animation by default */
+}
+
+.education-column:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  animation: colorChange 0.5s ease forwards; /* Trigger the animation on hover */
+}
+
+/* Define the color change animation */
+@keyframes colorChange {
+  0% {
+    background-color: #fff; /* Initial white background */
+  }
+  50% {
+    background-color: #f7e22c; /* Mid-transition yellow */
+  }
+  100% {
+    background-color: #bbf858; /* Final gold color */
+  }
+}
+
+/* Typography styling */
+.education-column h2 {
+  font-size: 1.8rem;
+  color: #f8d40a; /* Gold */
+  margin-bottom: 10px;
+}
+
+.education-column p {
+  font-size: 1rem;
+  color: #555; /* Medium gray for text */
+  margin: 5px 0; /* Spacing between lines */
+}
+
+.divider {
+  border: 0;
+  border-top: 2px solid #ccc; /* Line color */
+  margin: 10px 0; /* Space around the line */
+  width: 100%; /* Line width */
+}

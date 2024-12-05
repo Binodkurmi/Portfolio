@@ -4,6 +4,7 @@ import Footer from './Component/footer';
 import About from './Component/About';
 import Home from './Component/Home';
 import Skills from './Component/Skills';
+import Education from './Component/Education';
 // import Certificates from './Component/Certificates';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Header /> 
 			<Home/>
 			<About/>
+			<Education/>
 			<Skills/>
 			{/* <Certificates/> */}
 			<Footer/>
