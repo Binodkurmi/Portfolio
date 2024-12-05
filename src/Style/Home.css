@@ -14,10 +14,10 @@
 
 .home-content {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 20px 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
 }
 
 .home-content h1 {
@@ -77,12 +77,26 @@
 .home-icons .icon.mongodb-icon {
   color: aqua;
 }
+.home-icons .icon.mongodb-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  color: #f0a500; /* Gold color on hover */
+}
 
 .home-icons .icon.express-icon {
   color: blue;
 }
+.home-icons .icon.express-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  color: #f0a500; /* Gold color on hover */
+}
+
 
 .home-icons .icon.github-icon {
   color: chartreuse;
 }
+.home-icons .icon.github-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  color: #f0a500; /* Gold color on hover */
+}
+
 

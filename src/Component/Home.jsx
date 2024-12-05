@@ -10,7 +10,7 @@ const Home = () => {
       <div className="home-content">
         <h1>HI, I AM BINOD KURMI.</h1>
         <p><b>Full Stack Developer</b></p>
-        <div className="home-icons">
+        {/* <div className="home-icons">
           <FaHtml5 className="icon html-icon" title="HTML5" />
           <FaCss3Alt className="icon css-icon" title="CSS3" />
           <FaJs className="icon js-icon" title="JavaScript" />
@@ -23,7 +23,7 @@ const Home = () => {
 
           {/* <SiNpm className="icon npm-icon" title="NPM" /> */}
           {/* <SiPostman className="icon postman-icon" title="Postman" /> */}
-        </div>
+        {/* </div> */} 
       </div>
     </div>
   );
