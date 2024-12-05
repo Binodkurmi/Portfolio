@@ -1,60 +1,107 @@
 .about {
   display: flex;
-  height: 100vh; /* Full viewport height */
-  font-family: Arial, sans-serif;
+  justify-content: space-between;
+  padding: 50px 10%;
+  background-color: #f4f4f4;
 }
 
 .about-left {
-  flex: 1; /* 50% width */
-  background-color: #f2f5f8; /* Light gray */
-  color: rgb(22, 21, 21);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  flex: 1;
+  padding-right: 30px;
 }
 
 .about-left h1 {
-  font-size: 2.5rem;
+  font-size: 40px;
+  color: #f0a500;
+	align-items: center;
   margin-bottom: 20px;
-  color: #f0a500; /* Gold */
 }
 
 .about-left p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  text-align: center;
-  line-height: 1.5;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
 }
 
 .about-btn {
-  padding: 12px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #2c3e50;
-  background-color: #f0a500; /* Gold */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffd900;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 .about-btn:hover {
-  background-color: #ffc107;
+  background-color: #ffbb00;
 }
 
 .about-right {
-  flex: 1; /* 50% width */
+  flex: 1;
   display: flex;
-  background-color: #f2f5f8;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 
-.About-image{
-  width: 50%;
-  height: 50%;
-  object-fit: cover; /* Ensures the image covers the space */
+.About-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.home-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 5px;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.html-icon {
+  color: #e44d26;
+}
+
+.css-icon {
+  color: #2965f1;
+}
+
+.js-icon {
+  color: #f7df1e;
+}
+
+.bootstrap-icon {
+  color: #563d7c;
+}
+
+.react-icon {
+  color: #61dafb;
+}
+
+.nodejs-icon {
+  color: #68a063;
+}
+
+.mongodb-icon {
+  color: #4db33d;
+}
+
+.express-icon {
+  color: #000000;
+}
+
+.github-icon {
+  color: #24292f;
 }

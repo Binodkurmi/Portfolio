@@ -1,7 +1,7 @@
 import React from 'react';
+import { FaHtml5, FaCss3Alt, FaJs, FaBootstrap, FaReact } from 'react-icons/fa';
+import { SiNodedotjs, SiMongodb, SiExpress, SiGithub } from 'react-icons/si';
 import '../Style/About.css';
-import coverImage from '../assets/Cover.jpg';
- // Import your local image
 
 const About = () => {
   return (
@@ -14,7 +14,15 @@ const About = () => {
         <button className="about-btn">Contact Me</button>
       </div>
       <div className="about-right">
-      <img src={coverImage} alt="Portfolio Cover" className="About-image" />
+        <img src="/Profile.jpg" alt="Profile" className="About-image" style={{ width: '200px', height: 'auto' }} />
+        <div className="home-icons">
+          <FaJs className="icon js-icon" title="JavaScript" />
+          <FaReact className="icon react-icon" title="React" />
+          <SiNodedotjs className="icon nodejs-icon" title="Node.js" />
+          <SiMongodb className="icon mongodb-icon" title="MongoDB" />
+          <SiExpress className="icon express-icon" title="Express" />
+          <SiGithub className="icon github-icon" title="GitHub" />
+        </div>
       </div>
     </div>
   );

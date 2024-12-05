@@ -5,7 +5,6 @@ import About from './Component/About';
 import Home from './Component/Home';
 import Skills from './Component/Skills';
 import Education from './Component/Education';
-// import Certificates from './Component/Certificates';
 
 const App = () => {
   return (
@@ -15,7 +14,6 @@ const App = () => {
 			<About/>
 			<Education/>
 			<Skills/>
-			{/* <Certificates/> */}
 			<Footer/>
     </div>
   );

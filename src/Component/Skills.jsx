@@ -1,6 +1,7 @@
 import React from "react";
 import "../Style/Skills.css";
 import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap, FaJs, FaNodeJs, FaGitAlt, FaDatabase } from "react-icons/fa";
+import { SiTailwindcss, SiMongodb } from "react-icons/si";  // Add additional icons for Tailwind and MongoDB
 
 const Skills = () => {
   return (
@@ -16,23 +17,11 @@ const Skills = () => {
           <h3>React</h3>
           <p>A JavaScript library for building user interfaces. Highly skilled in building dynamic and interactive web applications.</p>
         </div>
-        
-        <div className="skill">
-          <FaHtml5 className="icon html-icon" />
-          <h3>HTML5</h3>
-          <p>The standard markup language for creating web pages. Mastery in creating semantic, accessible, and SEO-friendly HTML structures.</p>
-        </div>
 
         <div className="skill">
-          <FaCss3Alt className="icon css-icon" />
-          <h3>CSS3</h3>
-          <p>Powerful styling language used to create visually appealing and responsive layouts for websites.</p>
-        </div>
-
-        <div className="skill">
-          <FaBootstrap className="icon bootstrap-icon" />
-          <h3>Bootstrap</h3>
-          <p>Popular framework for building responsive, mobile-first websites with pre-defined components and utility classes.</p>
+          <SiTailwindcss className="icon tailwindcss-icon" />
+          <h3>Tailwind CSS</h3>
+          <p>Tailwind CSS is a utility-first framework that enables fast, custom UI building using pre-defined classes directly in HTML.</p>
         </div>
 
         <div className="skill">
@@ -54,9 +43,9 @@ const Skills = () => {
         </div>
 
         <div className="skill">
-          <FaDatabase className="icon database-icon" />
-          <h3>Databases</h3>
-          <p>Proficient in working with both SQL and NoSQL databases, including MongoDB and MySQL.</p>
+          <SiMongodb className="icon mongodb-icon" />
+          <h3>MongoDB</h3>
+          <p>MongoDB is a NoSQL database designed to store, query, and manage unstructured data.</p>
         </div>
       </div>
     </div>
