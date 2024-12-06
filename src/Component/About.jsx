@@ -9,7 +9,7 @@ const About = () => {
       <div className="about-left">
         <h1>About Me</h1>
         <p>
-          I am a passionate front-end developer with an eye for design and a commitment to delivering exceptional user experiences. With expertise in React, CSS, and JavaScript, I enjoy crafting responsive, dynamic web applications that delight users and meet modern standards.
+				I am a full-stack developer skilled in both front-end and back-end technologies. I specialize in using React, CSS, and JavaScript for building responsive user interfaces, while also working with Node.js, Express, and MongoDB to develop robust back-end solutions. My goal is to create seamless and dynamic web applications that provide an excellent user experience and performance.
         </p>
         <button className="about-btn">Contact Me</button>
       </div>
