@@ -14,22 +14,52 @@
 
 .home-content {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
   padding: 20px 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 .home-content h1 {
-  color: #f0a500;
+  color: #f0a500; /* Gold */
   font-size: 3rem;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for text depth */
 }
 
 .home-content p {
-  color: #eeff02;
+  color: #eeff02; /* Bright yellow */
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-content {
+    padding: 15px 30px; /* Adjust padding for smaller screens */
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem; /* Adjust font size for smaller devices */
+  }
+
+  .home-content p {
+    font-size: 1rem; /* Adjust text size for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 10px; /* Add padding for tighter screen space */
+  }
+
+  .home-content h1 {
+    font-size: 2rem; /* Smaller heading for mobile */
+  }
+
+  .home-content p {
+    font-size: 0.9rem; /* Compact text size */
+    margin-bottom: 20px;
+  }
 }

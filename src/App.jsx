@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './Component/Header';
+import Header from './Component/Header';  // Ensure this import is correct
 import Footer from './Component/Footer';
 import About from './Component/About';
 import Home from './Component/Home';
 import Skills from './Component/Skills';
 import Education from './Component/Education';
-import './Style/App.css'; // Add your global styles here
+import './Style/App.css';
 
 const App = () => {
   return (

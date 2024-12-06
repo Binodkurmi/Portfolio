@@ -10,13 +10,15 @@
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 50px;
 }
- 
+
 .footer-container {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
   justify-content: space-between; /* Space out the two sections */
   width: 100%;
   max-width: 1200px;
   margin-bottom: 20px;
+  gap: 20px; /* Add space between items for smaller screens */
 }
 
 .footer-form {
@@ -27,6 +29,7 @@
   padding: 20px;
   background-color: #34495e; /* Different background for the form */
   border-radius: 10px;
+  min-width: 300px; /* Ensures minimum width for smaller screens */
 }
 
 .footer-form h3 {
@@ -36,7 +39,7 @@
 
 .footer-form input,
 .footer-form textarea {
-  width: 90%;
+  width: 100%;
   padding: 12px;
   font-size: 1rem;
   border: none;
@@ -67,6 +70,7 @@
   justify-content: center;
   gap: 10px; /* Add gap between items */
   padding: 20px;
+  min-width: 300px; /* Ensures minimum width for smaller screens */
 }
 
 .footer-contact h3 {
@@ -106,3 +110,28 @@
   font-weight: 300;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically on tablets */
+    align-items: center;
+  }
+
+  .footer-form,
+  .footer-contact {
+    width: 100%; /* Full-width on smaller screens */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-form h3,
+  .footer-contact h3 {
+    font-size: 1.8rem; /* Reduce heading size for smaller devices */
+  }
+
+  .footer-form button,
+  .footer-contact p {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
+}

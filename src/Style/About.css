@@ -1,6 +1,7 @@
 .about {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
   padding: 50px 10%;
   background-color: #f4f4f4;
 }
@@ -13,7 +14,7 @@
 .about-left h1 {
   font-size: 40px;
   color: #f0a500;
-	align-items: center;
+  text-align: center; /* Center text for better alignment on smaller screens */
   margin-bottom: 20px;
 }
 
@@ -21,6 +22,7 @@
   font-size: 18px;
   color: #555;
   line-height: 1.6;
+  text-align: justify; /* Better readability */
 }
 
 .about-btn {
@@ -35,7 +37,7 @@
 }
 
 .about-btn:hover {
-  background-color:  #ffd900;
+  background-color: #ffd900;
 }
 
 .about-right {
@@ -51,8 +53,8 @@
   height: 200px;
   object-fit: cover;
   margin-bottom: 30px;
-	border: 5px solid #ffbb00;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  border: 5px solid #ffbb00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
 
 .home-icons {
@@ -106,4 +108,51 @@
 
 .github-icon {
   color: #24292f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column; /* Stack the layout vertically */
+    align-items: center;
+    padding: 30px 5%;
+  }
+
+  .about-left {
+    padding-right: 0;
+    text-align: center; /* Center-align text */
+  }
+
+  .about-left h1 {
+    font-size: 32px; /* Adjust font size for smaller screens */
+  }
+
+  .about-left p {
+    font-size: 16px;
+  }
+
+  .about-btn {
+    width: 100%; /* Full-width button for mobile */
+    margin-top: 10px;
+  }
+
+  .About-image {
+    width: 150px; /* Smaller image for mobile */
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-left h1 {
+    font-size: 28px;
+  }
+
+  .about-left p {
+    font-size: 14px;
+  }
+
+  .About-image {
+    width: 120px; /* Further reduce image size for smaller devices */
+    height: 120px;
+  }
 }

@@ -24,6 +24,7 @@
   font-weight: bold;
   letter-spacing: 1.5px;
   color: #f0a500; /* Gold */
+  text-decoration: none;
 }
 
 .nav {
@@ -43,36 +44,57 @@
 
 .nav-link:hover {
   background-color: #f0a500; /* Gold hover effect */
-  color: #2c3e50; 
-	/* Contrast text */
+  color: #2c3e50; /* Contrast text */
 }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-.social-icons .icon {
-  text-decoration: none;
-  color: #fff;
-  background-color: #555;
-  padding: 8px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
-.social-icons .icon:hover {
-  background-color: #f0a500;
-  transform: scale(1.1); /* Slight zoom effect */
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Hide the navigation by default on mobile */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .nav.open {
+    display: flex; /* Show navigation when open */
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger icon */
+  }
+
+  .nav-link {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
 }
 
-.icon.google {
-  color: #db4437; 
-}
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem; /* Adjust logo size for smaller devices */
+  }
 
-.icon.facebook {
-  color: #1877f2; 
+  .nav-link {
+    font-size: 0.9rem; /* Adjust font size for links */
+    padding: 6px 10px;
+  }
 }
