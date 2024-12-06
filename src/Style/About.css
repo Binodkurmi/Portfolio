@@ -26,7 +26,7 @@
 .about-btn {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #ffd900;
+  background-color: #ffbb00;
   color: white;
   border: none;
   border-radius: 5px;
@@ -35,7 +35,7 @@
 }
 
 .about-btn:hover {
-  background-color: #ffbb00;
+  background-color:  #ffd900;
 }
 
 .about-right {

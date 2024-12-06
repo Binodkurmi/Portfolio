@@ -43,7 +43,8 @@
 
 .nav-link:hover {
   background-color: #f0a500; /* Gold hover effect */
-  color: #2c3e50; /* Contrast text */
+  color: #2c3e50; 
+	/* Contrast text */
 }
 
 .social-icons {

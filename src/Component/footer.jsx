@@ -1,44 +1,41 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import '../Style/footer.css'; // Import your CSS file
+import '../Style/footer.css';
 
 const Footer = () => {
-	const [result, setResult] = useState("");
+  const [result, setResult] = useState('');
+
   const onSubmit = async (event) => {
     event.preventDefault();
-		setResult("Sending....");
+    setResult('Sending...');
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "a7dfd100-2d0e-4ded-a60c-51f44779714c");
+    formData.append('access_key', 'a7dfd100-2d0e-4ded-a60c-51f44779714c');
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
         body: formData,
       });
 
-			const data = await response.json();
+      const data = await response.json();
 
       if (data.success) {
-        setResult("Message sent successfully!");
-        event.target.reset(); 
+        setResult('Message sent successfully!');
+        event.target.reset();
       } else {
-        setResult("Error: " + data.message);
+        setResult('Error: ' + data.message);
       }
-      setTimeout(() => setResult(""), 3000);
     } catch (error) {
-      setResult("An unexpected error occurred. Please try again later.");
-
-      setTimeout(() => setResult(""), 3000);
+      setResult('An unexpected error occurred. Please try again later.');
     }
+
+    setTimeout(() => setResult(''), 3000);
   };
 
-
   return (
-    <footer className="footer">
+    <footer id="contact" className="footer">
       <div className="footer-container">
-        {/* Left Half: Contact Form */}
         <div className="footer-form">
           <h3>Send a Message</h3>
           <form onSubmit={onSubmit}>
@@ -47,14 +44,13 @@ const Footer = () => {
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
           </form>
-					{result && (
-        <div className="bg-white text-black text-center p-4 fixed bottom-0 w-full shadow-lg">
-          {result}
-        </div>
-      )}
+          {result && (
+            <div className="notification">
+              {result}
+            </div>
+          )}
         </div>
 
-        {/* Right Half: Contact Information */}
         <div className="footer-contact">
           <h3>Contact Me</h3>
           <p>I am a Front-End Developer</p>
@@ -77,7 +73,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
       <p className="footer-text">© 2024 Portfolio. All rights reserved. Designed by Binod Kurmi.</p>
     </footer>
   );
