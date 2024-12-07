@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Component/Header';  // Ensure this import is correct
-import Footer from './Component/Footer';
+import Header from './Component/Header.jsx';  // Ensure this import is correct
+import Footer from './Component/Footer.jsx';
 import About from './Component/About';
 import Home from './Component/Home';
 import Skills from './Component/Skills';
