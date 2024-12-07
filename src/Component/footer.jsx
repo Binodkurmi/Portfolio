@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import '../Style/footer.css';
+import '../Style/Footer.css';
 
 const Footer = () => {
   const [result, setResult] = useState('');
