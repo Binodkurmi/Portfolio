@@ -18,7 +18,7 @@ const About = () => {
         <div className="home-icons">
           <FaJs className="icon js-icon" title="JavaScript" />
           <FaReact className="icon react-icon" title="React" />
-          <SiNodedotjs className="icon nodejs-icon" title="Node.js" />
+          <SiNodedotjs className="icon nodejs-icon" title="Node.js" /> 
           <SiMongodb className="icon mongodb-icon" title="MongoDB" />
           <SiExpress className="icon express-icon" title="Express" />
           <SiGithub className="icon github-icon" title="GitHub" />
