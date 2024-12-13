@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Style/Header.css';
 
-const Header = () => {
+const header = () => {
   const [menuOpen, setMenuOpen] = useState(false); // This manages the menu state (open or closed)
 
   // Function to toggle the menu
@@ -30,4 +30,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default header;
