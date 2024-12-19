@@ -55,7 +55,7 @@ const Footer = () => {
 					<h3>Contact Me</h3>
 					<p>I am a Front-End Developer</p>
 					<p>Email: binodchaudhary3850@gmail.com</p>
-					<p>23800, Taulihawa-3</p>
+					<p>23800, Kaplivastu-3 Taulihawa</p>
 					<p>Phone: +997-9821451060</p>
 					<div className="social-icons">
 						<a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
