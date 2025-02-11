@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../Style/Header.css';
 
 const header = () => {
-	const [menuOpen, setMenuOpen] = useState(false); // This manages the menu state (open or closed)
+	const [menuOpen, setMenuOpen] = useState(false); 
 
 	// Function to toggle the menu
 	const toggleMenu = () => {
@@ -13,7 +13,7 @@ const header = () => {
 		<header className="header">
 			<div className="container">
 				<div className="logo">Binod</div>
-				<nav className={`nav ${menuOpen ? 'open' : ''}`}> {/* The 'open' class is added when the menu is open */}
+				<nav className={`nav ${menuOpen ? 'open' : ''}`}>
 					<a href="#home" className="nav-link">Home</a>
 					<a href="#about" className="nav-link">About Me</a>
 					<a href="#education" className="nav-link">Education</a>
