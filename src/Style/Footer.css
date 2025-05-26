@@ -3,8 +3,8 @@
 
 /* Footer General Styling */
 .footer {
-  background-color: #f8f9fa;
-  color: #444;
+    background: rgba(3, 9, 15, 0.85); 
+  color: #fff;
   padding: 50px 30px;
   text-align: center;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);

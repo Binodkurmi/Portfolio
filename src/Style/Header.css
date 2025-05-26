@@ -1,7 +1,7 @@
 .header {
-  background: rgba(3, 9, 15, 0.85); /* Darker with more opacity for better contrast */
+  background: rgba(3, 9, 15, 0.85); 
   color: #fff;
-  padding: 12px 30px; /* Slightly more padding for better spacing */
+  padding: 12px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
