@@ -53,7 +53,7 @@ const Footer = () => {
 
 				<div className="footer-contact">
 					<h3>Contact Me</h3>
-					<p>I am a Front-End Developer</p>
+					<p>I am a FullStack Developer</p>
 					<p>Email: binodchaudhary3850@gmail.com</p>
 					<p>23800, Kaplivastu-3 Taulihawa</p>
 					<p>Phone: +997-9821451060</p>

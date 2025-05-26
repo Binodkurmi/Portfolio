@@ -8,58 +8,69 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fafafa;
+  overflow: hidden; /* Prevent any overflow issues */
 }
 
 .home-content {
+  max-width: 90vw; /* Responsive width limit */
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  background-color: rgba(0, 0, 0, 0.55); /* Slightly stronger transparency for better contrast */
+  padding: 25px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Slightly bigger shadow */
+  backdrop-filter: blur(6px); /* Add subtle background blur for nice glass effect */
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
 }
 
 .home-content h1 {
   color: #f0a500; /* Gold */
-  font-size: 3rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for text depth */
+  font-size: 3.5rem; /* Slightly larger for impact */
+  margin-bottom: 25px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  font-weight: 700;
 }
 
 .home-content p {
-  color: #eeff02; /* Bright yellow */
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 30px;
+  color: #fff500; /* Slightly softer yellow for better readability */
+  font-size: 1.3rem;
+  line-height: 1.9;
+  margin-bottom: 35px;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .home-content {
-    padding: 15px 30px; /* Adjust padding for smaller screens */
+    padding: 20px 35px;
   }
 
   .home-content h1 {
-    font-size: 2.5rem; /* Adjust font size for smaller devices */
+    font-size: 2.8rem;
   }
 
   .home-content p {
-    font-size: 1rem; /* Adjust text size for better readability */
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
   .home {
-    padding: 10px; /* Add padding for tighter screen space */
+    padding: 15px;
+  }
+
+  .home-content {
+    padding: 15px 20px;
   }
 
   .home-content h1 {
-    font-size: 2rem; /* Smaller heading for mobile */
+    font-size: 2.2rem;
   }
 
   .home-content p {
-    font-size: 0.9rem; /* Compact text size */
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 25px;
   }
 }

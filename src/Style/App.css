@@ -1,32 +1,47 @@
+/* Import fonts if you're doing it in CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #F8FAFC;
+  color: #1E293B;
 }
 
+/* HEADER */
 .header {
-  background-color: #333;
+  background-color: #0F172A; /* Deep Navy */
   color: white;
   padding: 10px 20px;
-	text-decoration: none; /* Removes underline */
-	
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Navigation Links */
 .nav-link {
   color: white;
   margin-right: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.nav-link:hover {
+  color: #FACC15; /* Golden Yellow */
+}
 
-
+/* FOOTER */
 .footer {
-  /* background-color: #fffefe; */
+  background-color: #0F172A;
+  color: #F8FAFC;
   padding: 20px;
   text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
@@ -39,23 +54,29 @@ body {
   width: 45%;
 }
 
+/* Social Media Icons */
 .social-icons a {
   margin: 0 10px;
-  color: #f5a804;
+  color: #FACC15; /* Golden Yellow */
   text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #fafbfc;
+  color: #38BDF8; /* Sky Blue */
 }
 
+/* Notification */
 .notification {
-  background: white;
-  color: black;
+  background: #F8FAFC;
+  color: #1E293B;
   padding: 10px;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 1px solid #1E293B;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.2);
 }

@@ -8,7 +8,7 @@ const Education = () => {
       <div className="education-columns">
         {/* SEE Board */}
         <div className="education-column">
-          <h2>2017</h2>
+          <h2>2004-2017</h2>
 					<p>Secondary Education Examination</p>
 					<hr className="divider" />
           <p><b>School:</b></p>
@@ -28,7 +28,7 @@ const Education = () => {
 
         {/* B.Tech */}
         <div className="education-column">
-          <h2>2021</h2>
+          <h2>2021-2025</h2>
 					<p>Bachelor in computer Engineering</p>
 					<hr className="divider" /> 
           <p><b>Institution:</b></p>

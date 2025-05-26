@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import '../Style/Header.css';
 
-const header = () => {
-	const [menuOpen, setMenuOpen] = useState(false); 
+const Header = () => {
+	const [menuOpen, setMenuOpen] = useState(false);
 
-	// Function to toggle the menu
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen);
 	};
@@ -20,7 +19,7 @@ const header = () => {
 					<a href="#skills" className="nav-link">Skills</a>
 					<a href="#contact" className="nav-link">Contact Me</a>
 				</nav>
-				<div className="hamburger" onClick={toggleMenu}> {/* When clicked, it calls toggleMenu to open/close the menu */}
+				<div className="hamburger" onClick={toggleMenu}>
 					<div className="line"></div>
 					<div className="line"></div>
 					<div className="line"></div>
@@ -30,4 +29,4 @@ const header = () => {
 	);
 };
 
-export default header;
+export default Header;

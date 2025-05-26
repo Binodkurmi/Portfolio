@@ -4,6 +4,7 @@ import { FaHtml5, FaCss3Alt, FaJs, FaBootstrap, FaReact } from 'react-icons/fa';
 import { SiNodedotjs, SiMongodb, SiExpress, SiGithub } from 'react-icons/si';
 import '../Style/About.css';
 
+
 const About = () => {
   return (
     <div className="about">

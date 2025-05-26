@@ -1,9 +1,18 @@
+/* Add this in your HTML head to import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8FAFC;
+  color: #1E293B;
+}
+
 .about {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
   padding: 50px 10%;
-  background-color: #f4f4f4;
+  background-color: #F8FAFC; /* Updated background */
 }
 
 .about-left {
@@ -12,33 +21,37 @@
 }
 
 .about-left h1 {
+  font-family: 'Poppins', sans-serif;
   font-size: 40px;
-  color: #f0a500;
-  text-align: center; /* Center text for better alignment on smaller screens */
+  color: #38BDF8; /* Primary Accent: Sky Blue */
+  text-align: center;
   margin-bottom: 20px;
 }
 
 .about-left p {
   font-size: 18px;
-  color: #555;
+  color: #1E293B; /* Text Color */
   line-height: 1.6;
-  text-align: justify; /* Better readability */
+  text-align: justify;
 }
 
 .contactme {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #ffbb00;
-  color: white;
+  background-color: #FACC15; /* Golden yellow button */
+  color: #0F172A; /* Deep navy text */
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   margin-top: 20px;
-	text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-.about-btn:hover {
-  background-color: #ffd900;
+.about-btn:hover,
+.contactme:hover {
+  background-color: #fce96a; /* Lighter yellow on hover */
 }
 
 .about-right {
@@ -54,9 +67,9 @@
   height: 200px;
   object-fit: cover;
   margin-bottom: 30px;
-  border: 2px solid #ffbb00;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  box-sizing: border-box; /* Ensure padding and borders are included in width/height */
+  border: 3px solid #38BDF8; /* Accent border */
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.4);
+  box-sizing: border-box;
 }
 
 .home-icons {
@@ -68,7 +81,7 @@
 
 .icon {
   font-size: 5px;
-  color: #333;
+  color: #1E293B;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -76,57 +89,32 @@
   transform: scale(1.1);
 }
 
-.html-icon {
-  color: #e44d26;
-}
-
-.css-icon {
-  color: #2965f1;
-}
-
-.js-icon {
-  color: #f7df1e;
-}
-
-.bootstrap-icon {
-  color: #563d7c;
-}
-
-.react-icon {
-  color: #61dafb;
-}
-
-.nodejs-icon {
-  color: #68a063;
-}
-
-.mongodb-icon {
-  color: #4db33d;
-}
-
-.express-icon {
-  color: #000000;
-}
-
-.github-icon {
-  color: #24292f;
-}
+/* Tech Icons - keep original colors */
+.html-icon { color: #e44d26; }
+.css-icon { color: #2965f1; }
+.js-icon { color: #f7df1e; }
+.bootstrap-icon { color: #563d7c; }
+.react-icon { color: #61dafb; }
+.nodejs-icon { color: #68a063; }
+.mongodb-icon { color: #4db33d; }
+.express-icon { color: #000000; }
+.github-icon { color: #24292f; }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .about {
-    flex-direction: column; /* Stack the layout vertically */
+    flex-direction: column;
     align-items: center;
     padding: 30px 5%;
   }
 
   .about-left {
     padding-right: 0;
-    text-align: center; /* Center-align text */
+    text-align: center;
   }
 
   .about-left h1 {
-    font-size: 32px; /* Adjust font size for smaller screens */
+    font-size: 32px;
   }
 
   .about-left p {
@@ -134,12 +122,12 @@
   }
 
   .about-btn {
-    width: 100%; /* Full-width button for mobile */
+    width: 100%;
     margin-top: 10px;
   }
 
   .About-image {
-    width: 150px; /* Smaller image for mobile */
+    width: 150px;
     height: 150px;
   }
 }
@@ -154,7 +142,7 @@
   }
 
   .About-image {
-    width: 120px; /* Further reduce image size for smaller devices */
+    width: 120px;
     height: 120px;
   }
 }
