@@ -1,79 +1,119 @@
 .header {
-  background: rgba(44, 62, 80, 0.25); /* very light transparent background */
-  backdrop-filter: blur(12px);
+  background: rgba(3, 9, 15, 0.85); /* Darker with more opacity for better contrast */
   color: #fff;
-  padding: 8px 20px; /* Reduced vertical padding from 15px to 8px */
+  padding: 12px 30px; /* Slightly more padding for better spacing */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 8px rgba(255, 255, 255, 0.05); /* subtle inset highlight */
   position: sticky;
   top: 0;
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
-  transition: background-color 0.4s ease;
-}
-
-.logo {
-  font-size: 1.6rem; /* Slightly smaller */
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  background: linear-gradient(45deg, #facc15, #f0a500);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.35s ease, filter 0.35s ease;
+  backdrop-filter: saturate(180%) blur(10px); /* subtle glass effect */
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
   user-select: none;
 }
 
-.nav-link {
-  font-size: 1rem; /* Smaller font */
-  padding: 6px 12px; /* Reduced padding */
-  border-radius: 8px;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-  position: relative;
-  transition: all 0.35s ease;
+.header:hover {
+  background: rgba(3, 9, 15, 0.95); /* Slightly darker on hover for feedback */
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.5),
+    inset 0 -2px 12px rgba(255, 255, 255, 0.08);
 }
 
-/* Hamburger Button */
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.logo {
+	font-size: 1.6rem;
+	font-weight: 700;
+	letter-spacing: 2.5px;
+	background: linear-gradient(45deg, #facc15, #f0a500);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	text-decoration: none;
+	user-select: none;
+}
+
+/* Desktop Nav */
+.nav {
+	display: flex;
+	gap: 20px;
+}
+
+/* Nav Link */
+.nav-link {
+	font-size: 1rem;
+	padding: 6px 12px;
+	border-radius: 8px;
+	font-weight: 600;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.35s ease;
+}
+
+.nav-link:hover {
+	color: #facc15;
+}
+
+/* Hamburger */
 .hamburger {
-  padding: 3px; /* Reduced padding */
-  gap: 4px; /* Slightly smaller gap */
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	padding: 5px;
+	gap: 4px;
 }
 
 .hamburger .line {
-  width: 25px; /* Slightly smaller */
-  height: 3px; /* Slightly thinner */
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	border-radius: 2px;
 }
 
-/* Mobile Responsive */
+/* Mobile View */
 @media (max-width: 768px) {
-  .nav {
-    top: 50px; /* Adjusted top since header height is less */
-    padding: 15px 20px; /* Less padding */
-  }
+	.hamburger {
+		display: flex;
+	}
 
-  .nav-link {
-    font-size: 0.95rem;
-    padding: 8px 10px;
-  }
+.nav {
+	position: absolute;
+	top: 40px; 
+	right: 20px;
+	flex-direction: column;
+	background: linear-gradient(45deg, #38BDF8, #0EA5E9); 
+	border-radius: 5px;
+	display: none;
+	gap: 0px;
+	z-index: 999;
 }
 
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1.4rem;
-  }
 
-  .nav-link {
-    font-size: 0.85rem;
-    padding: 8px;
-  }
+	.nav.open {
+		display: flex;
+	}
 
-  .hamburger .line {
-    width: 20px;
-    height: 2.5px;
-  }
+	.nav-link {
+		font-size: 0.95rem;
+		padding: 10px;
+		color: white;
+		text-align: center;
+	}
+
+	.logo {
+		font-size: 1.4rem;
+	}
 }

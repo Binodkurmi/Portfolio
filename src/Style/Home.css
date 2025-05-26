@@ -1,6 +1,6 @@
 .home {
   height: 100vh;
-  background-image: url('/home.jpg'); /* Transparent background image */
+  background-image: url('/home1.avif');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -10,30 +10,33 @@
   position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fafafa;
-  overflow: hidden; /* Prevent any overflow issues */
+  overflow: hidden;
+  padding: 20px; /* Padding to avoid edge overflow on small devices */
+  box-sizing: border-box;
 }
 
 .home-content {
-  max-width: 90vw; /* Responsive width limit */
+  max-width: 90vw;
+  width: 100%;
+  max-width: 600px; /* Limit max width for big screens */
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.55); /* Slightly stronger transparency for better contrast */
-  padding: 25px 50px;
+  background-color: #0f172a; /* Solid navy background */
+  padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Slightly bigger shadow */
-  backdrop-filter: blur(6px); /* Add subtle background blur for nice glass effect */
-  -webkit-backdrop-filter: blur(6px); /* Safari support */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
 .home-content h1 {
-  color: #f0a500; /* Gold */
-  font-size: 3.5rem; /* Slightly larger for impact */
+  color: #f0a500;
+  font-size: 3.5rem;
   margin-bottom: 25px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   font-weight: 700;
 }
 
 .home-content p {
-  color: #fff500; /* Slightly softer yellow for better readability */
+  color: #fff500;
   font-size: 1.3rem;
   line-height: 1.9;
   margin-bottom: 35px;
@@ -41,36 +44,61 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Tablet devices */
+@media (max-width: 992px) {
   .home-content {
-    padding: 20px 35px;
+    max-width: 80vw;
+    padding: 25px 30px;
   }
 
   .home-content h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+  .home-content {
+    max-width: 90vw;
+    padding: 20px 25px;
+  }
+
+  .home-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 18px;
   }
 
   .home-content p {
     font-size: 1.1rem;
+    margin-bottom: 25px;
   }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
   .home {
-    padding: 15px;
+    padding: 10px;
   }
 
   .home-content {
+    max-width: 100%;
     padding: 15px 20px;
+    border-radius: 10px;
   }
 
   .home-content h1 {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
+    margin-bottom: 15px;
   }
 
   .home-content p {
     font-size: 1rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 }

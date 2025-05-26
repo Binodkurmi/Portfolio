@@ -1,9 +1,8 @@
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap');
 
 .education-page {
   padding: 60px 30px;
-  background: linear-gradient(to right, #fdfcfb, #e2d1c3); /* Warm gradient background */
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
   font-family: 'Inter', sans-serif;
   color: #2e2e2e;
 }
@@ -44,7 +43,7 @@
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  border-left: 6px solid #0ea5e9; /* Sky border */
+  border-left: 6px solid #0ea5e9;
 }
 
 .education-column:hover {
@@ -56,7 +55,7 @@
 .education-column h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
-  color: #0ea5e9; /* Sky blue */
+  color: #0ea5e9;
   margin-bottom: 10px;
 }
 
@@ -73,7 +72,7 @@
   width: 100%;
 }
 
-/* Responsive */
+/* Tablet and below */
 @media (max-width: 768px) {
   .education-columns {
     flex-direction: column;
@@ -89,6 +88,7 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
   .education-heading {
     font-size: 2rem;
@@ -100,5 +100,28 @@
 
   .education-column p {
     font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Devices (e.g. < 400px) */
+@media (max-width: 400px) {
+  .education-page {
+    padding: 40px 15px;
+  }
+
+  .education-heading {
+    font-size: 1.8rem;
+  }
+
+  .education-column {
+    padding: 20px 15px;
+  }
+
+  .education-column h2 {
+    font-size: 1.15rem;
+  }
+
+  .education-column p {
+    font-size: 0.8rem;
   }
 }

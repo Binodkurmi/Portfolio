@@ -1,7 +1,10 @@
+/* Google Fonts can be imported separately if needed */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
 /* Footer General Styling */
 .footer {
-  background-color: #f8f9fa; /* Light gray background */
-  color: #444; /* Darker text */
+  background-color: #f8f9fa;
+  color: #444;
   padding: 50px 30px;
   text-align: center;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
@@ -38,7 +41,7 @@
 .footer-form h3,
 .footer-contact h3 {
   font-size: 1.7rem;
-  color: #007bff; /* Blue accent */
+  color: #007bff;
   margin-bottom: 20px;
   font-weight: 700;
 }
@@ -107,9 +110,7 @@
   margin-top: 25px;
 }
 
-/* Responsive Design */
-
-/* Tablets (max-width: 768px) */
+/* Tablets (≤ 768px) */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -123,7 +124,7 @@
   }
 }
 
-/* Mobile Devices (max-width: 480px) */
+/* Mobiles (≤ 480px) */
 @media (max-width: 480px) {
   .footer {
     padding: 40px 15px;
@@ -155,5 +156,30 @@
 
   .footer-text {
     font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Devices (≤ 360px) */
+@media (max-width: 360px) {
+  .footer-form,
+  .footer-contact {
+    padding: 20px 15px;
+  }
+
+  .footer-form h3,
+  .footer-contact h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-form button {
+    padding: 8px 18px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
   }
 }
