@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,55 +10,158 @@ const Header = () => {
 
   return (
     <header
-      style={{ backgroundColor: '#121212' }} // dark background
-      className="text-white fixed w-full shadow-md"
+      className="fixed top-0 left-0 w-full z-50 bg-[#121212] text-white shadow-md"
     >
-      <div className="container mx-auto flex items-center justify-between p-5">
-        {/* Left: Logo */}
+      <div className="container mx-auto flex  justify-between p-4 h-20">
+        {/* Logo */}
         <div className="text-2xl bg-gradient-to-r from-[#FA6E00] to-[#E60026] bg-clip-text text-transparent font-bold font-lato">
-          Binod
+          BINOD
         </div>
 
-        {/* Center: Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 font-lato font-medium">
-          <a href="#home" className="hover:text-[#FD6F00] transition">Home</a>
-          <a href="#about" className="hover:text-[#FD6F00] transition">About Me</a>
-          <a href="#education" className="hover:text-[#FD6F00] transition">Education</a>
-          <a href="#skills" className="hover:text-[#FD6F00] transition">Skills</a>
-          <a href="#contact" className="hover:text-[#FD6F00] transition">Contact Me</a>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-8 font-lato font-medium">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-[#FD6F00] transition-colors duration-300"
+            activeClass="text-[#FD6F00] font-semibold"
+          >
+            Home
+          </Link>
+					<Link
+            to="certificates"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-[#FD6F00] transition-colors duration-300"
+            activeClass="text-[#FD6F00] font-semibold"
+          >
+            Certificates
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-[#FD6F00] transition-colors duration-300"
+            activeClass="text-[#FD6F00] font-semibold"
+          >
+            About Me
+          </Link>
+          <Link
+            to="education"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-[#FD6F00] transition-colors duration-300"
+            activeClass="text-[#FD6F00] font-semibold"
+          >
+            Education
+          </Link>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-[#FD6F00] transition-colors duration-300"
+            activeClass="text-[#FD6F00] font-semibold"
+          >
+            Skills
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-[#FD6F00] transition-colors duration-300"
+            activeClass="text-[#FD6F00] font-semibold"
+          >
+            Contact
+          </Link>
+          <button className="ml-4 bg-[#FD6F00] text-white px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 font-semibold">
+            Hire Me
+          </button>
         </nav>
 
-        {/* Right: Hire Me Button */}
-        <div className="hidden md:block">
-          <button className="bg-[#FD6F00] text-white px-5 py-2 rounded-lg hover:bg-orange-700 transition font-lato">
-            Hire Me
-          </button>
-        </div>
-
-        {/* Hamburger Menu for Mobile */}
-        <div
-          className="md:hidden cursor-pointer space-y-1"
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden focus:outline-none"
           onClick={toggleMenu}
+          aria-label="Toggle menu"
         >
-          <div className="w-6 h-0.5 bg-white" />
-          <div className="w-6 h-0.5 bg-white" />
-          <div className="w-6 h-0.5 bg-white" />
-        </div>
+          <div className="w-6 flex flex-col items-end space-y-1.5">
+            <span 
+              className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'w-6 rotate-45 translate-y-2' : 'w-6'}`}
+            ></span>
+            <span 
+              className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : 'w-5'}`}
+            ></span>
+            <span 
+              className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'w-6 -rotate-45 -translate-y-2' : 'w-4'}`}
+            ></span>
+          </div>
+        </button>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-[#2a9d8f] px-4 pb-4 space-y-2">
-          <a href="#home" className="block text-white hover:text-[#FD6F00]">Home</a>
-          <a href="#about" className="block text-white hover:text-[#FD6F00]">About Me</a>
-          <a href="#education" className="block text-white hover:text-[#FD6F00]">Education</a>
-          <a href="#skills" className="block text-white hover:text-[#FD6F00]">Skills</a>
-          <a href="#contact" className="block text-white hover:text-[#FD6F00]">Contact Me</a>
-          <button className="mt-2 w-full bg-[#FD6F00] text-white px-5 py-2 rounded-lg hover:bg-orange-700 transition font-semibold">
-            Hire Me
-          </button>
+      {/* Mobile Menu Dropdown */}
+      <div
+        className={`md:hidden bg-[#121212] transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-96 py-4' : 'max-h-0 py-0'}`}
+      >
+        <div className="container mx-auto px-4 flex flex-col space-y-4">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-[#FD6F00] transition-colors duration-300 px-4 py-2"
+            activeClass="text-[#FD6F00] font-semibold"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-[#FD6F00] transition-colors duration-300 px-4 py-2"
+            activeClass="text-[#FD6F00] font-semibold"
+            onClick={() => setMenuOpen(false)}
+          >
+            About Me
+          </Link>
+          <Link
+            to="education"
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-[#FD6F00] transition-colors duration-300 px-4 py-2"
+            activeClass="text-[#FD6F00] font-semibold"
+            onClick={() => setMenuOpen(false)}
+          >
+            Education
+          </Link>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-[#FD6F00] transition-colors duration-300 px-4 py-2"
+            activeClass="text-[#FD6F00] font-semibold"
+            onClick={() => setMenuOpen(false)}
+          >
+            Skills
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-[#FD6F00] transition-colors duration-300 px-4 py-2"
+            activeClass="text-[#FD6F00] font-semibold"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </Link>
+        <div className="flex justify-center sm:justify-start">
+  <button className="mt-2 w-32 bg-[#FD6F00] text-white px-3 py-2 sm:px-5 sm:py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 font-semibold text-sm sm:text-base">
+    Hire Me
+  </button>
+</div>
+
         </div>
-      )}
+      </div>
     </header>
   );
 };
