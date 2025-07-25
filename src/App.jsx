@@ -6,6 +6,7 @@ import Education from './Component/Education';
 import Skills from './Component/Skills';
 import Footer from './Component/Footer';
 import Certificates from './Component/Certificates';
+import Projects from './Component/Projects';
 
 const App = () => {
   return (
@@ -31,6 +32,10 @@ const App = () => {
         <section id="skills">
           <Skills />
         </section>
+
+				<section id='projects'>
+					<Projects/>
+					</section>
       </main>
 
       <Footer />

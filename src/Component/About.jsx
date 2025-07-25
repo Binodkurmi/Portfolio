@@ -4,7 +4,7 @@ import { SiNodedotjs, SiMongodb, SiExpress, SiGithub } from "react-icons/si";
 
 const About = () => {
   return (
-    <section id="about" className="w-full bg-[#121212] py-20 px-6 sm:px-10 md:px-20">
+    <section id="about" className="w-full bg-[#121212]  px-6 sm:px-10 md:px-20">
       {/* Centered Heading */}
       <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#FA6E00] to-[#E60026] bg-clip-text text-transparent">
         About Me

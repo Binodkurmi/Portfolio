@@ -82,7 +82,7 @@ const Footer = () => {
             <span className="text-[#707070]">CONTACT </span>
             <span className="text-[#959595]">ME</span>
           </h3>
-          <div className="bg-gradient-to-b from-[#464141] via-[#BABABA] to-[#464141] p-6 rounded-lg">
+          <div className="bg-gradient-to-b from-[#464141] to-[#464141] p-6 rounded-lg">
             <p className="text-gray-300 mb-4 text-lg">
               I am a FullStack Developer passionate about creating web applications.
             </p>
