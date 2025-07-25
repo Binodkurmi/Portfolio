@@ -1,27 +1,34 @@
 import React from 'react';
-import Header from './Component/Header'; 
-import About from './Component/About';  
-import Home from './Component/Home';  
-import Skills from './Component/Skills'; 
-import Footer from './Component/footer';
-import Education from './Component/Education';  
+import Header from './Component/Header';
+import Home from './Component/Home';
+import About from './Component/About';
+import Education from './Component/Education';
+import Skills from './Component/Skills';
+import Footer from './Component/Footer';
 
 const App = () => {
   return (
-    <div>
+    <div className="font-sans scroll-smooth  text-[#264653]">
       <Header />
-      <section id="home">
-        <Home />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="education">
-        <Education />
-      </section>
-      <section id="skills">
-        <Skills />
-      </section>
+
+      <main className="pt-20">
+        <section id="home" className="min-h-screen ">
+          <Home />
+        </section>
+
+        <section id="about" className="py-16">
+          <About />
+        </section>
+
+        <section id="education" className="py-16  text-white">
+          <Education />
+        </section>
+
+        <section id="skills" className="py-16  text-white">
+          <Skills />
+        </section>
+      </main>
+
       <Footer />
     </div>
   );
