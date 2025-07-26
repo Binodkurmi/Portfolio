@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-scroll';
+import React, { useState } from "react";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -81,9 +81,11 @@ const Header = () => {
           >
             Contact
           </Link>
-          <button className="ml-4 bg-[#FD6F00] text-white px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 font-semibold">
-            Hire Me
-          </button>
+          <a href="#contact">
+            <button className="ml-4 bg-[#FD6F00] text-white px-5 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 font-semibold">
+              Hire Me
+            </button>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -93,21 +95,31 @@ const Header = () => {
           aria-label="Toggle menu"
         >
           <div className="w-6 flex flex-col items-end space-y-1.5">
-            <span 
-              className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'w-6 rotate-45 translate-y-2' : 'w-6'}`}
+            <span
+              className={`block h-0.5 bg-white transition-all duration-300 ${
+                menuOpen ? "w-6 rotate-45 translate-y-2" : "w-6"
+              }`}
             ></span>
-            <span 
-              className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : 'w-5'}`}
+            <span
+              className={`block h-0.5 bg-white transition-all duration-300 ${
+                menuOpen ? "opacity-0" : "w-5"
+              }`}
             ></span>
-            <span 
-              className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'w-6 -rotate-45 -translate-y-2' : 'w-4'}`}
+            <span
+              className={`block h-0.5 bg-white transition-all duration-300 ${
+                menuOpen ? "w-6 -rotate-45 -translate-y-2" : "w-4"
+              }`}
             ></span>
           </div>
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <div className={`md:hidden bg-[#121212] transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-screen py-4' : 'max-h-0 py-0'}`}>
+      <div
+        className={`md:hidden bg-[#121212] transition-all duration-300 overflow-hidden ${
+          menuOpen ? "max-h-screen py-4" : "max-h-0 py-0"
+        }`}
+      >
         <div className="container mx-auto px-4 flex flex-col space-y-4">
           <Link
             to="home"
@@ -159,7 +171,7 @@ const Header = () => {
           >
             Skills
           </Link>
-					<Link
+          <Link
             to="projects"
             smooth={true}
             duration={500}
@@ -180,9 +192,16 @@ const Header = () => {
             Contact
           </Link>
           <div className="flex justify-center sm:justify-start">
-            <button className="mt-2 w-32 bg-[#FD6F00] text-white px-3 py-2 sm:px-5 sm:py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 font-semibold text-sm sm:text-base">
-              Hire Me
-            </button>
+            <a href="#contact">
+              <button
+                onClick={() => setMenuOpen(false)}
+                smooth={true}
+                duration={500}
+                className="mt-2 w-32 bg-[#FD6F00] text-white px-3 py-2 sm:px-5 sm:py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 font-semibold text-sm sm:text-base"
+              >
+                Hire Me
+              </button>
+            </a>
           </div>
         </div>
       </div>
