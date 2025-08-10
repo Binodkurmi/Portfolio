@@ -17,9 +17,6 @@ const App = () => {
         <section id="home" className="min-h-screen ">
           <Home />
         </section>
-				<section id='certificates'>
-					<Certificates/>
-				</section>
 
         <section id="about">
           <About />
@@ -35,6 +32,10 @@ const App = () => {
 
 				<section id='projects'>
 					<Projects/>
+					</section>
+          
+          <section id='certificates'>
+					<Certificates/>
 					</section>
       </main>
 

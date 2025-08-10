@@ -32,10 +32,10 @@ const Projects = () => {
       id: 3,
       title: "Portfolio Website",
       description: "Modern responsive portfolio showcasing skills and projects with smooth animations.",
-      tags: ["React", "Framer Motion", "CSS3"],
-      github: "#",
-      live: "#",
-      image: "/portfolio.jpg",
+      tags: ["React", "Framer Motion", "Tailwind"],
+      github: "https://github.com/Binodkurmi/Portfolio",
+      live: "https://binodkurmi.netlify.app",
+      image: "/Profiles1.PNG",
       accentColor: "#10B981"
     },
     {
