@@ -1,85 +1,197 @@
-import React from "react";
+import React, { useEffect, useRef } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
+import { FaGithub, FaLinkedin, FaTwitter, FaFileDownload } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { RiSendPlaneFill } from 'react-icons/ri';
 
 const Home = () => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [controls, isInView]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const imageVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "backOut"
+      }
+    }
+  };
+
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-[#121212] text-white pt-28 md:pt-32 lg:pt-40"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] text-white pt-20 overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 md:gap-12">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+        <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-[#FD6F00] blur-[80px]"></div>
+        <div className="absolute bottom-20 right-10 w-60 h-60 rounded-full bg-[#984300] blur-[100px]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-8">
         {/* Left Side - Content */}
-        <div className="text-center lg:text-left w-full lg:w-1/2">
-          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            <span className="text-[#707070] block">HI, I AM </span>
-            <span className="text-[#959595]">BINOD KURMI</span>
-          </h1>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={containerVariants}
+          className="text-center lg:text-left w-full lg:w-1/2 relative z-10"
+        >
+          <motion.div variants={itemVariants} className="mb-2">
+            <span className="inline-block px-3 py-1 text-xs font-semibold bg-[#FD6F00]/10 text-[#FD6F00] rounded-full">
+              FULLSTACK DEVELOPER
+            </span>
+          </motion.div>
+<motion.h1 
+  variants={itemVariants} 
+  className="text-3xl xs:text-2xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-5 leading-snug"
+>
+  <span className="block text-gray-400">Hi, I'm</span>
+  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FD6F00] via-[#ff9a3c] to-[#FD6F00] animate-gradient">
+    Binod Kurmi
+  </span>
+</motion.h1>
 
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 md:mb-6 bg-gradient-to-r from-[#984300] via-[#FD6F00] to-[#CA5900] bg-clip-text text-transparent">
-            Full Stack Developer
-          </h3>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-xl mx-auto lg:mx-0 mb-6 md:mb-8">
-            Web development is always evolving with new technologies.
-          </p>
+          <motion.p variants={itemVariants} className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-xl mx-auto lg:mx-0 mb-8 md:mb-10 leading-relaxed">
+            Crafting <span className="text-[#FD6F00] font-medium">digital experiences</span> that blend innovation with intuitive design. Let's build something extraordinary.
+          </motion.p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 mb-8 md:mb-12">
-            <a
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 mb-10 md:mb-12"
+          >
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="#contact"
-              className="bg-[#FD6F00] hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold w-full sm:w-auto min-w-[200px] text-center"
+              className="relative overflow-hidden bg-gradient-to-r from-[#FD6F00] to-[#ff9a3c] text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 group min-w-[200px] justify-center"
             >
-              Hire Me
-            </a>
-            <a
+              <span>Hire Me</span>
+              <RiSendPlaneFill className="transition-transform group-hover:translate-x-1" />
+              <span className="absolute inset-0 bg-gradient-to-r from-[#ff9a3c] to-[#FD6F00] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="/BinodKurmi.pdf"
               download
-              className="border-2 border-[#FD6F00] hover:bg-[#FD6F00] text-[#FD6F00] hover:text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold w-full sm:w-auto min-w-[200px] text-center"
+              className="relative overflow-hidden border-2 border-[#FD6F00] text-[#FD6F00] hover:text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 group min-w-[200px] justify-center"
             >
-              Download CV
-            </a>
-          </div>
+              <span>Download CV</span>
+              <FaFileDownload />
+              <span className="absolute inset-0 bg-[#FD6F00] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
+            </motion.a>
+          </motion.div>
+
+          
 
           {/* Stats */}
-          <div className="w-full max-w-md bg-gradient-to-b from-[#464141] via-[#BABABA] to-[#464141] px-6 py-6 rounded-lg mx-auto lg:mx-0">
+          <motion.div 
+            variants={itemVariants}
+            className="w-full max-w-md bg-[#111] border border-[#222] px-6 py-6 rounded-xl mx-auto lg:mx-0 backdrop-blur-sm"
+          >
             <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <p className="text-3xl font-bold text-[#FD6F00]">3+</p>
-                <p className="text-gray-300 font-medium mt-2 text-sm md:text-base">
-                  Experience
-                </p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-[#FD6F00]">10+</p>
-                <p className="text-gray-300 font-medium mt-2 text-sm md:text-base">
-                  Projects done
-                </p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-[#FD6F00]">5+</p>
-                <p className="text-gray-300 font-medium mt-2 text-sm md:text-base">
-                  Happy clients
-                </p>
-              </div>
+              {[
+                { value: "3+", label: "Years Experience" },
+                { value: "10+", label: "Projects Done" },
+                { value: "5+", label: "Happy Clients" }
+              ].map((stat, index) => (
+                <div key={index}>
+                  <p className="text-3xl font-bold text-[#FD6F00]">{stat.value}</p>
+                  <p className="text-gray-400 font-medium mt-2 text-sm">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* Right Side - Circular Image */}
-        <div className="relative w-full flex justify-center items-center mb-8 lg:mb-0">
-          <div className="w-[280px] h-[280px] xs:w-[320px] xs:h-[320px] sm:w-[380px] sm:h-[380px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px] xl:w-[550px] xl:h-[550px] rounded-full bg-[#474440] flex justify-center items-center relative overflow-hidden">
-            <img
-              src="/Profile.png"
-              alt="Binod Kurmi"
-              className="absolute w-[80%] h-auto object-cover"
-              style={{
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                maxWidth: "none"
+        {/* Right Side - Image with floating animation */}
+        <motion.div
+          initial="hidden"
+          animate={controls}
+          variants={imageVariants}
+          className="relative w-full flex justify-center items-center mb-12 lg:mb-0"
+        >
+          <div className="relative w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px]">
+            {/* Glow effect */}
+            <div className="absolute inset-0 rounded-full bg-[#FD6F00] opacity-10 blur-xl animate-pulse"></div>
+            
+            {/* Circular border with animation */}
+            <motion.div
+              animate={{
+                rotate: 360,
+                transition: {
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear"
+                }
               }}
-            />
+              className="absolute inset-0 rounded-full border-2 border-dashed border-[#FD6F00]/30"
+            ></motion.div>
+            
+            {/* Main image container */}
+            <div className="absolute inset-4 rounded-full bg-gradient-to-br from-[#222] to-[#111] overflow-hidden flex justify-center items-center shadow-2xl">
+              <img
+                src="/Profile.png"
+                alt="Binod Kurmi"
+                className="w-full h-full object-cover scale-110"
+              />
+            </div>
+            
+            {/* Floating tech badges */}
+            <motion.div
+              animate={{
+                y: [0, -10, 0],
+                transition: {
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
+              className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-[#111] border border-[#222] rounded-full shadow-lg"
+            >
+              <span className="text-sm font-medium text-[#FD6F00]">Available for work</span>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

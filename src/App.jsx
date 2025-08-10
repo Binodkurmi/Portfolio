@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Component/Header';
 import Home from './Component/Home';
 import About from './Component/About';
 import Education from './Component/Education';
@@ -7,12 +6,13 @@ import Skills from './Component/Skills';
 import Footer from './Component/Footer';
 import Certificates from './Component/Certificates';
 import Projects from './Component/Projects';
+import Header from './Component/Header';
 
 const App = () => {
   return (
     <div className="font-sans scroll-smooth  text-[#264653]">
-      <Header />
-
+      
+   <Header/>
       <main>
         <section id="home" className="min-h-screen ">
           <Home />
