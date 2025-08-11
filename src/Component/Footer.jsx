@@ -202,46 +202,50 @@ const Footer = () => {
                 </label>
                 <div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#FD6F00] to-[#ff9a3c] w-0 peer-focus:w-full transition-all duration-500"></div>
               </motion.div>
-              
-              <div className="relative">
-                <motion.button
-                  type="submit"
-                  animate={controls}
-                  whileHover={{ 
-                    scale: 1.03,
-                    boxShadow: "0 5px 15px rgba(253, 111, 0, 0.4)"
-                  }}
-                  whileTap={{ scale: 0.98 }}
-                  disabled={isSubmitting}
-                  className="relative  overflow-hidden bg-gradient-to-r from-[#FD6F00] to-[#ff9a3c] text-white px-8 py-4 rounded-xl font-medium flex items-center gap-3 group w-full shadow-lg"
-                >
-                  <span className="relative  z-10 flex items-center gap-2 justify-center">
-                    <motion.span
-                      animate={isSubmitting ? { opacity: 0 } : { opacity: 1 }}
-                    >
-                      Send Message
-                    </motion.span>
-                    <motion.div
-                      animate={isSubmitting ? { 
-                        opacity: 1,
-                        rotate: 360,
-                        transition: { 
-                          rotate: {
-                            repeat: Infinity,
-                            duration: 1,
-                            ease: "linear"
-                          }
-                        }
-                      } : { opacity: 0 }}
-                      className="absolute"
-                    >
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
-                    </motion.div>
-                  </span>
-                  <FiSend className="relative z-10 group-hover:translate-x-1 transition-transform" />
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#ff9a3c] to-[#FD6F00] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                </motion.button>
-              </div>
+             <div className="relative">
+  <motion.button
+    type="submit"
+    animate={controls}
+    whileHover={{ 
+      scale: 1.03,
+      boxShadow: "0 5px 15px rgba(253, 111, 0, 0.4)"
+    }}
+    whileTap={{ scale: 0.98 }}
+    disabled={isSubmitting}
+    className="relative overflow-hidden bg-gradient-to-r from-[#FD6F00] to-[#ff9a3c] text-white px-8 py-4 rounded-xl font-medium flex items-center justify-center gap-3 group w-full shadow-lg"
+  >
+    <span className="relative z-10 flex items-center gap-2">
+      <motion.span
+        animate={isSubmitting ? { opacity: 0 } : { opacity: 1 }}
+      >
+        Send Message
+      </motion.span>
+      <motion.div
+        animate={
+          isSubmitting
+            ? {
+                opacity: 1,
+                rotate: 360,
+                transition: {
+                  rotate: {
+                    repeat: Infinity,
+                    duration: 1,
+                    ease: "linear",
+                  },
+                },
+              }
+            : { opacity: 0 }
+        }
+        className="absolute"
+      >
+        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
+      </motion.div>
+    </span>
+    <FiSend className="relative z-10 group-hover:translate-x-1 transition-transform" />
+    <span className="absolute inset-0 bg-gradient-to-r from-[#ff9a3c] to-[#FD6F00] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+  </motion.button>
+</div>
+
               
               {result && (
                 <motion.p 
@@ -306,8 +310,8 @@ const Footer = () => {
                     <FaEnvelope size={18} />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Email</p>
-                    <a href="mailto:binodchaudhary3850@gmail.com" className="text-gray-200 hover:text-[#FD6F00] transition-colors">
+                    <p className="text-gray-400">Email</p>
+                    <a href="mailto:binodchaudhary3850@gmail.com" className="text-gray-200 text-sm hover:text-[#FD6F00] transition-colors">
                       binodchaudhary3850@gmail.com
                     </a>
                   </div>
@@ -321,9 +325,9 @@ const Footer = () => {
                     <FaMapMarkerAlt size={18} />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-gray-200">Kapilvastu, Taulihawa</p>
-                    <p className='text-gray-200'>Word No.: 3, Laxminagar</p>
+                    <p className="text-gray-400 ">Location</p>
+                    <p className="text-gray-200 text-sm">Kapilvastu, Taulihawa</p>
+                    <p className='text-gray-200 text-sm'>Word No.: 3, Laxminagar</p>
                   </div>
                 </motion.div>
                 
@@ -335,8 +339,8 @@ const Footer = () => {
                     <FaPhone size={18} />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Phone</p>
-                    <a href="tel:+9779821451060" className="text-gray-200 hover:text-[#FD6F00] transition-colors">
+                    <p className="text-gray-400">Phone</p>
+                    <a href="tel:+9779821451060" className="text-sm text-gray-200 hover:text-[#FD6F00] transition-colors">
                       +977-9821451060
                     </a>
                   </div>
@@ -351,10 +355,10 @@ const Footer = () => {
                 <h4 className="text-xl font-semibold text-gray-300 mb-6">Connect with me</h4>
                 <div className="flex gap-4 flex-wrap text-center justify-center">
                   {[
-                    { icon: <FaFacebook size={20} />, url: "https://facebook.com", color: "#1877F2" },
-                    { icon: <FaInstagram size={20} />, url: "https://instagram.com", color: "#E4405F" },
-                    { icon: <FaLinkedin size={20} />, url: "https://linkedin.com", color: "#0A66C2" },
-                    { icon: <FaTwitter size={20} />, url: "https://twitter.com", color: "#1DA1F2" },
+                    { icon: <FaFacebook size={20} />, url: "https://www.facebook.com/binod.chaudhary.102739", color: "#1877F2" },
+                    { icon: <FaInstagram size={20} />, url: "https://www.instagram.com/chaudhary_binod05", color: "#E4405F" },
+                    { icon: <FaLinkedin size={20} />, url: "https://www.linkedin.com/in/binod-kurmi-98a255176", color: "#0A66C2" },
+                    { icon: <FaTwitter size={20} />, url: "https://x.com/kurmi_bino95734?s=21", color: "#1DA1F2" },
                   ].map((social, index) => (
                     <motion.a
                       key={index}

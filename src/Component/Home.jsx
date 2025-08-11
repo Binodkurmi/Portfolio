@@ -74,7 +74,7 @@ const Home = () => {
             <span className="inline-block px-3 py-1 text-xs font-semibold bg-[#FD6F00]/10 text-[#FD6F00] rounded-full">
               FULLSTACK DEVELOPER
             </span>
-          </motion.div>2``
+          </motion.div>
 <motion.h1 
   variants={itemVariants} 
   className="text-3xl xs:text-2xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-5 leading-snug"
