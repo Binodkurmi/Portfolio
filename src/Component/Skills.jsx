@@ -66,7 +66,7 @@ const Skills = () => {
   ];
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 30 },
     visible: (i) => ({
       opacity: 1,
       y: 0,
@@ -92,35 +92,35 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="relative w-full bg-gradient-to-b from-[#0a0a0a] to-[#1a1a1a] py-20 px-6 overflow-hidden">
-      {/* Background elements */}
+    <section id="skills" className="relative w-full bg-gradient-to-b from-[#0a0a0a] to-[#1a1a1a] py-12 sm:py-20 px-4 sm:px-6 overflow-hidden">
+      {/* Background elements - reduced size for mobile */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-60 h-60 rounded-full bg-[#61DAFB] blur-[100px]"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-[#F05032] blur-[120px]"></div>
+        <div className="absolute top-1/4 left-1/4 w-40 h-40 sm:w-60 sm:h-60 rounded-full bg-[#61DAFB] blur-[60px] sm:blur-[100px]"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-40 h-40 sm:w-80 sm:h-80 rounded-full bg-[#F05032] blur-[60px] sm:blur-[120px]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
+        {/* Header - adjusted for mobile */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FD6F00] via-[#ff9a3c] to-[#FD6F00] animate-gradient">
               Technical Expertise
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto px-2 sm:px-0">
             Technologies I've mastered and the tools I use to build exceptional digital experiences
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
+        {/* Skills Grid - adjusted gap and padding for mobile */}
         <div 
           ref={ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
         >
           {mainSkills.map((skill, index) => (
             <motion.div
@@ -129,22 +129,22 @@ const Skills = () => {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
-              whileHover={{ y: -10 }}
-              className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-[#111] to-[#1a1a1a] border border-[#222] p-6"
-              style={{ boxShadow: `0 4px 30px ${skill.color}20` }}
+              whileHover={{ y: -5 }}
+              className="relative group overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#111] to-[#1a1a1a] border border-[#222] p-4 sm:p-6"
+              style={{ boxShadow: `0 4px 20px ${skill.color}20` }}
             >
-              {/* Glow effect */}
+              {/* Glow effect - reduced for mobile */}
               <div 
-                className="absolute -inset-1 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                className="absolute -inset-0.5 sm:-inset-1 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                 style={{ 
                   background: `radial-gradient(circle at center, ${skill.color}, transparent 70%)`,
-                  filter: 'blur(20px)'
+                  filter: 'blur(12px)'
                 }}
               ></div>
 
               <div className="relative z-10">
                 <div 
-                  className="w-16 h-16 rounded-xl flex items-center justify-center mb-6"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6"
                   style={{ 
                     backgroundColor: `${skill.color}10`,
                     border: `1px solid ${skill.color}30`
@@ -153,14 +153,14 @@ const Skills = () => {
                   <span style={{ color: skill.color }}>{skill.icon}</span>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-3">{skill.title}</h3>
-                <p className="text-gray-400 mb-5">{skill.description}</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">{skill.title}</h3>
+                <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-5">{skill.description}</p>
                 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {skill.tools.map((tool, i) => (
                     <span 
                       key={i}
-                      className="text-xs px-3 py-1 rounded-full backdrop-blur-sm"
+                      className="text-[10px] xs:text-xs px-2 py-0.5 sm:px-3 sm:py-1 rounded-full backdrop-blur-sm"
                       style={{ 
                         backgroundColor: `${skill.color}15`,
                         border: `1px solid ${skill.color}30`,
@@ -176,15 +176,15 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Additional Skills */}
+        {/* Additional Skills - adjusted for mobile */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6 }}
-          className="mt-20 text-center"
+          className="mt-12 sm:mt-20 text-center"
         >
-          <h3 className="text-2xl font-semibold text-white mb-8">Other Technologies I Work With</h3>
-          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+          <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6 sm:mb-8">Other Technologies I Work With</h3>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-3xl mx-auto">
             {otherSkills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -192,15 +192,15 @@ const Skills = () => {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={chipVariants}
-                whileHover={{ y: -3 }}
-                className="flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm"
+                whileHover={{ y: -2 }}
+                className="flex items-center gap-1 sm:gap-2 px-3 py-1 sm:px-4 sm:py-2 rounded-full backdrop-blur-sm"
                 style={{ 
                   backgroundColor: `${skill.color}10`,
                   border: `1px solid ${skill.color}30`
                 }}
               >
                 <span style={{ color: skill.color }}>{skill.icon}</span>
-                <span className="text-gray-300 font-medium">{skill.name}</span>
+                <span className="text-xs sm:text-sm text-gray-300 font-medium">{skill.name}</span>
               </motion.div>
             ))}
           </div>

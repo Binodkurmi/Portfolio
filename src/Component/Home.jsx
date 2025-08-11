@@ -74,7 +74,7 @@ const Home = () => {
             <span className="inline-block px-3 py-1 text-xs font-semibold bg-[#FD6F00]/10 text-[#FD6F00] rounded-full">
               FULLSTACK DEVELOPER
             </span>
-          </motion.div>
+          </motion.div>2``
 <motion.h1 
   variants={itemVariants} 
   className="text-3xl xs:text-2xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-5 leading-snug"
@@ -188,7 +188,7 @@ const Home = () => {
               }}
               className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-[#111] border border-[#222] rounded-full shadow-lg"
             >
-              <span className="text-sm font-medium text-[#FD6F00]">Available for work</span>
+              <span className="text-sm text-center font-medium text-[#FD6F00]">Available for work</span>
             </motion.div>
           </div>
         </motion.div>
