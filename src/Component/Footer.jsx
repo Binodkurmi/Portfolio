@@ -322,7 +322,8 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-gray-200">23800, Kapilvastu-3 Taulihawa</p>
+                    <p className="text-gray-200">Kapilvastu, Taulihawa</p>
+                    <p className='text-gray-200'>Word No.: 3, Laxminagar</p>
                   </div>
                 </motion.div>
                 
