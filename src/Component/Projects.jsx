@@ -15,7 +15,7 @@ const Projects = () => {
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
       github: "#",
       live: "#",
-      image: "/ecommerce.jpg",
+      image: "/Profile3.PNG",
       accentColor: "#FD6F00"
     },
     {
@@ -45,7 +45,7 @@ const Projects = () => {
       tags: ["JavaScript", "API Integration", "Chart.js"],
       github: "#",
       live: "#",
-      image: "/weather.jpg",
+      image: "/Profile2.PNG",
       accentColor: "#3B82F6"
     },
     {
