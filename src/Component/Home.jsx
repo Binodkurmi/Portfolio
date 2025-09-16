@@ -109,8 +109,7 @@ const Home = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/BinodKurmi.pdf"
-              download
+              href="/Binod_kurmi_Resume.pdf"download
               className="relative overflow-hidden border-2 border-[#FD6F00] text-[#FD6F00] hover:text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 group min-w-[200px] justify-center"
             >
               <span>Download CV</span>
