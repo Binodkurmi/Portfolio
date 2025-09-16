@@ -435,7 +435,7 @@ const About = () => {
               <div className="relative p-1.5 rounded-full bg-gradient-to-br from-[#FD6F00] to-[#E60026] shadow-lg shadow-[#FD6F00]/30">
                 <div className="relative overflow-hidden rounded-full border-4 border-[#0a0a0a]">
                   <motion.img
-                    src="/Profile.png"
+                    src="/profile_ppsize.jpeg"
                     alt="Profile"
                     className="w-48 h-48 object-cover"
                     whileHover={{

@@ -170,7 +170,7 @@ const Home = () => {
             {/* Main image container */}
             <div className="absolute inset-4 rounded-full bg-gradient-to-br from-[#222] to-[#111] overflow-hidden flex justify-center items-center shadow-2xl">
               <img
-                src="/Profile.png"
+                src="/profile_ppsize.jpeg"
                 alt="Binod Kurmi"
                 className="w-full h-full object-cover scale-110"
               />
