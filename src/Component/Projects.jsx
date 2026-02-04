@@ -24,7 +24,7 @@ const Projects = () => {
       description: "A modern and responsive rice mill website showcasing products, processing stages, quality features, and contact information with a clean and user-friendly design.",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
       github: "#",
-      live: "#",
+      live: "https://jaiambericemill.netlify.app",
       image: "/RiceMill.PNG",
       accentColor: "#6366F1"
     },
