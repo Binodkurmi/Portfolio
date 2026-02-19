@@ -1,14 +1,21 @@
 import React from "react";
-import { FaJs, FaReact, FaJava, FaNodeJs } from "react-icons/fa";
+import { 
+  FaJs, 
+  FaReact, 
+  FaJava, 
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaGitAlt,
+  FaGithub,
+  FaFigma,
+  FaDatabase
+} from "react-icons/fa";
 import {
-  SiTypescript,
-  SiMongodb,
-  SiExpress,
   SiTailwindcss,
-  SiSpring,
-  SiPostgresql,
-  SiDocker,
-  SiKubernetes,
+  SiMongodb,
+  SiMysql,
+  SiOracle
 } from "react-icons/si";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Particles from "react-tsparticles";
@@ -39,98 +46,107 @@ const About = () => {
     },
   };
 
-  // 3D Tech Constellation
+  // Tech Constellation with only specified technologies
   const techConstellation = [
-    // Core Technologies (closest to center)
+    // Core Frontend Technologies
     { 
-      icon: <FaReact className="text-6xl text-cyan-400" />, 
-      name: "React", 
+      icon: <FaHtml5 className="text-6xl text-orange-500" />, 
+      name: "HTML5", 
       size: 1.2,
-      glow: "shadow-[0_0_20px_rgba(34,211,238,0.5)]",
+      glow: "shadow-[0_0_20px_rgba(249,115,22,0.5)]",
       orbit: { radius: 80, speed: 0.02, axis: "y" }
     },
     { 
-      icon: <SiTypescript className="text-6xl text-blue-500" />, 
-      name: "TypeScript", 
+      icon: <FaCss3Alt className="text-6xl text-blue-500" />, 
+      name: "CSS3", 
       size: 1.1,
-      glow: "shadow-[0_0_20px_rgba(49,120,198,0.5)]",
+      glow: "shadow-[0_0_20px_rgba(59,130,246,0.5)]",
       orbit: { radius: 80, speed: -0.015, axis: "x" }
     },
+    { 
+      icon: <FaJs className="text-6xl text-yellow-400" />, 
+      name: "JavaScript", 
+      size: 1.2,
+      glow: "shadow-[0_0_20px_rgba(234,179,8,0.5)]",
+      orbit: { radius: 80, speed: 0.01, axis: "z" }
+    },
+    { 
+      icon: <FaReact className="text-6xl text-cyan-400" />, 
+      name: "React", 
+      size: 1.1,
+      glow: "shadow-[0_0_20px_rgba(34,211,238,0.5)]",
+      orbit: { radius: 80, speed: -0.02, axis: "y" }
+    },
     
-    // Middle Orbit
+    // Styling & UI Frameworks
+    { 
+      icon: <FaBootstrap className="text-5xl text-purple-500" />, 
+      name: "Bootstrap", 
+      size: 1.0,
+      glow: "shadow-[0_0_15px_rgba(168,85,247,0.4)]",
+      orbit: { radius: 140, speed: 0.018, axis: "x" }
+    },
+    { 
+      icon: <SiTailwindcss className="text-5xl text-cyan-300" />, 
+      name: "Tailwind CSS", 
+      size: 1.0,
+      glow: "shadow-[0_0_15px_rgba(103,232,249,0.4)]",
+      orbit: { radius: 140, speed: -0.022, axis: "y" }
+    },
+    
+    // Core Java (your specified backend focus)
     { 
       icon: <FaJava className="text-5xl text-red-500" />, 
-      name: "Java", 
-      size: 1,
-      glow: "shadow-[0_0_15px_rgba(239,68,68,0.4)]",
-      orbit: { radius: 140, speed: 0.012, axis: "z" }
-    },
-    { 
-      icon: <SiSpring className="text-5xl text-green-500" />, 
-      name: "Spring", 
-      size: 0.9,
-      glow: "shadow-[0_0_15px_rgba(74,222,128,0.4)]",
-      orbit: { radius: 140, speed: -0.018, axis: "y" }
-    },
-    { 
-      icon: <FaNodeJs className="text-5xl text-green-600" />, 
-      name: "Node.js", 
-      size: 0.95,
-      glow: "shadow-[0_0_15px_rgba(22,163,74,0.4)]",
-      orbit: { radius: 140, speed: 0.025, axis: "x" }
+      name: "Core Java", 
+      size: 1.2,
+      glow: "shadow-[0_0_25px_rgba(239,68,68,0.6)]",
+      orbit: { radius: 140, speed: 0.015, axis: "z" }
     },
     
-    // Outer Orbit
+    // Databases
     { 
       icon: <SiMongodb className="text-5xl text-green-400" />, 
       name: "MongoDB", 
-      size: 0.85,
-      glow: "shadow-[0_0_12px_rgba(52,211,153,0.3)]",
-      orbit: { radius: 200, speed: -0.01, axis: "y" }
+      size: 1.0,
+      glow: "shadow-[0_0_15px_rgba(52,211,153,0.4)]",
+      orbit: { radius: 200, speed: 0.012, axis: "y" }
     },
     { 
-      icon: <SiPostgresql className="text-5xl text-blue-400" />, 
-      name: "PostgreSQL", 
-      size: 0.85,
-      glow: "shadow-[0_0_12px_rgba(96,165,250,0.3)]",
-      orbit: { radius: 200, speed: 0.015, axis: "z" }
+      icon: <SiMysql className="text-5xl text-blue-400" />, 
+      name: "MySQL", 
+      size: 1.0,
+      glow: "shadow-[0_0_15px_rgba(96,165,250,0.4)]",
+      orbit: { radius: 200, speed: -0.018, axis: "x" }
     },
     { 
-      icon: <SiDocker className="text-5xl text-blue-300" />, 
-      name: "Docker", 
-      size: 0.8,
-      glow: "shadow-[0_0_12px_rgba(147,197,253,0.3)]",
-      orbit: { radius: 200, speed: -0.022, axis: "x" }
-    },
-    { 
-      icon: <SiKubernetes className="text-5xl text-blue-400" />, 
-      name: "Kubernetes", 
-      size: 0.8,
-      glow: "shadow-[0_0_12px_rgba(59,130,246,0.3)]",
-      orbit: { radius: 200, speed: 0.018, axis: "y" }
+      icon: <SiOracle className="text-5xl text-red-400" />, 
+      name: "Oracle", 
+      size: 1.0,
+      glow: "shadow-[0_0_15px_rgba(248,113,113,0.4)]",
+      orbit: { radius: 200, speed: 0.02, axis: "z" }
     },
     
-    // Floating Decoratives
+    // Version Control & Tools
     { 
-      icon: <FaJs className="text-4xl text-yellow-400" />, 
-      name: "JavaScript", 
-      size: 0.7,
-      glow: "shadow-[0_0_10px_rgba(234,179,8,0.3)]",
-      orbit: { radius: 260, speed: 0.03, axis: "z" }
+      icon: <FaGitAlt className="text-5xl text-orange-500" />, 
+      name: "Git", 
+      size: 0.95,
+      glow: "shadow-[0_0_12px_rgba(249,115,22,0.3)]",
+      orbit: { radius: 260, speed: -0.015, axis: "y" }
     },
     { 
-      icon: <SiTailwindcss className="text-4xl text-cyan-300" />, 
-      name: "Tailwind", 
-      size: 0.7,
-      glow: "shadow-[0_0_10px_rgba(103,232,249,0.3)]",
-      orbit: { radius: 260, speed: -0.025, axis: "x" }
+      icon: <FaGithub className="text-5xl text-gray-300" />, 
+      name: "GitHub", 
+      size: 0.95,
+      glow: "shadow-[0_0_12px_rgba(209,213,219,0.3)]",
+      orbit: { radius: 260, speed: 0.025, axis: "x" }
     },
     { 
-      icon: <SiExpress className="text-4xl text-gray-300" />, 
-      name: "Express", 
-      size: 0.7,
-      glow: "shadow-[0_0_10px_rgba(209,213,219,0.3)]",
-      orbit: { radius: 260, speed: 0.02, axis: "y" }
+      icon: <FaFigma className="text-5xl text-purple-400" />, 
+      name: "Figma", 
+      size: 0.9,
+      glow: "shadow-[0_0_12px_rgba(192,132,252,0.3)]",
+      orbit: { radius: 260, speed: -0.02, axis: "z" }
     }
   ];
 
@@ -138,6 +154,12 @@ const About = () => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
+  // Create transform values for profile animation
+  const profileX = useTransform(mouseX, [-10, 10], [5, -5]);
+  const profileY = useTransform(mouseY, [-10, 10], [5, -5]);
+  const profileRotateX = useTransform(mouseY, [-100, 100], [5, -5]);
+  const profileRotateY = useTransform(mouseX, [-100, 100], [-5, 5]);
+
   const handleMouseMove = (e) => {
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
     const x = (e.clientX - left - width / 2) / 20;
@@ -327,31 +349,26 @@ const About = () => {
             >
               I'm a{" "}
               <span className="text-[#FD6F00] font-medium relative inline-block">
-                <span className="relative z-10">Full Stack Developer</span>
+                <span className="relative z-10">Frontend Developer</span>
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-[#FD6F00]/40 -z-1 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]" />
               </span>{" "}
-              with expertise in both{" "}
+              with strong{" "}
               <span className="text-gray-200 font-medium relative group">
-                <span className="relative z-10">JavaScript</span>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400/40 -z-1 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 delay-100" />
-              </span>{" "}
-              and{" "}
-              <span className="text-gray-200 font-medium relative group">
-                <span className="relative z-10">Java</span>
+                <span className="relative z-10">Core Java</span>
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500/40 -z-1 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 delay-150" />
               </span>{" "}
-              ecosystems, crafting immersive digital experiences with cutting-edge technologies.
+              knowledge, crafting responsive and dynamic web applications with modern technologies.
             </motion.p>
 
             <motion.p
               variants={textVariants}
               className="text-gray-300/90 text-lg sm:text-xl leading-relaxed"
             >
-              My passion lies in architecting{" "}
+              I specialize in building elegant user interfaces with{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6E00] via-[#FD6F00] to-[#E60026] font-medium">
-                scalable solutions
-              </span>{" "}
-              that bridge elegant interfaces with robust backend systems, optimized for performance and maintainability.
+                HTML5, CSS3, JavaScript, and React
+              </span>
+              , while leveraging my Java expertise for robust backend integration and database management.
             </motion.p>
 
             <motion.div 
@@ -359,18 +376,19 @@ const About = () => {
               className="flex flex-wrap gap-3 mt-8"
             >
               {[
-                "System Architecture",
-                "Microservices",
-                "GraphQL/REST",
-                "Database Optimization",
-                "Cloud Infrastructure",
-                "CI/CD Pipelines",
-                "Container Orchestration",
-                "State Management",
-                "Web Performance",
-                "Type Safety",
-                "DevOps Automation",
-                "API Design"
+                "HTML5",
+                "CSS3", 
+                "JavaScript",
+                "Core Java",
+                "React",
+                "Bootstrap",
+                "Tailwind CSS",
+                "MongoDB",
+                "MySQL",
+                "Oracle",
+                "Git",
+                "GitHub",
+                "Figma"
               ].map((skill, i) => (
                 <motion.span
                   key={skill}
@@ -401,10 +419,10 @@ const About = () => {
             <motion.div 
               className="relative z-30 rounded-full group"
               style={{
-                x: useTransform(mouseX, [-10, 10], [5, -5]),
-                y: useTransform(mouseY, [-10, 10], [5, -5]),
-                rotateX: useTransform(mouseY, [-100, 100], [5, -5]),
-                rotateY: useTransform(mouseX, [-100, 100], [-5, 5])
+                x: profileX,
+                y: profileY,
+                rotateX: profileRotateX,
+                rotateY: profileRotateY
               }}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ 
@@ -475,13 +493,17 @@ const About = () => {
               ))}
             </motion.div>
 
-            {/* 3D Tech Constellation */}
+            {/* 3D Tech Constellation - Fixed: No hooks inside map */}
             {techConstellation.map((tech, i) => {
               const angle = (i * 360) / techConstellation.length;
               const radians = (angle * Math.PI) / 180;
               const radius = tech.orbit.radius;
               const x = Math.cos(radians) * radius;
               const y = Math.sin(radians) * radius;
+              
+              // Create dynamic transform values without using hooks
+              const baseX = x;
+              const baseY = y;
               
               return (
                 <motion.div
@@ -490,19 +512,19 @@ const About = () => {
                   style={{
                     left: '50%',
                     top: '50%',
-                    x: useTransform(mouseX, [-100, 100], [x, x + 10]),
-                    y: useTransform(mouseY, [-100, 100], [y, y + 10]),
+                    x: baseX,
+                    y: baseY,
                     z: 0,
                     scale: tech.size
                   }}
                   animate={{
-                    [tech.orbit.axis]: 360,
-                    y: [y, y + (Math.random() * 30 - 15), y],
+                    rotate: [0, 360],
+                    y: [baseY, baseY + (Math.random() * 30 - 15), baseY],
                     opacity: [0.7, 1, 0.7],
                     scale: [tech.size * 0.9, tech.size * 1.1, tech.size * 0.9]
                   }}
                   transition={{
-                    [tech.orbit.axis]: {
+                    rotate: {
                       repeat: Infinity,
                       duration: 30 / Math.abs(tech.orbit.speed),
                       ease: "linear"
@@ -558,7 +580,7 @@ const About = () => {
               );
             })}
 
-            {/* Connecting Lines */}
+            {/* Connecting Lines for core technologies */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
               {techConstellation.slice(0, 4).map((_, i) => {
                 const nextIndex = (i + 1) % techConstellation.length;

@@ -127,9 +127,9 @@ const Home = () => {
           >
             <div className="grid grid-cols-3 gap-4 text-center">
               {[
-                { value: "3+", label: "Years Experience" },
-                { value: "10+", label: "Projects Done" },
-                { value: "5+", label: "Happy Clients" }
+                { value: "0+", label: "Years Experience" },
+                { value: "5+", label: "Projects Done" },
+                { value: "0+", label: "Happy Clients" }
               ].map((stat, index) => (
                 <div key={index}>
                   <p className="text-3xl font-bold text-[#FD6F00]">{stat.value}</p>

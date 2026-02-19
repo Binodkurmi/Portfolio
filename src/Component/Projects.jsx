@@ -58,16 +58,7 @@ const Projects = () => {
       image: "/birthday.PNG",
       accentColor: "#8B5CF6"
     },
-    {
-      id: 6,
-      title: "Recipe Finder",
-      description: "Search thousands of recipes with filtering by dietary restrictions and ingredients.",
-      tags: ["Vue.js", "Spoonacular API", "Vuetify"],
-      github: "#",
-      live: "#",
-      image: "/recipe.jpg",
-      accentColor: "#EC4899"
-    }
+    
   ];
 
   const cardVariants = {
